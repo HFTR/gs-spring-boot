@@ -33,7 +33,7 @@ stages:
     - task: Maven@3
       displayName: 'Maven Package'
       inputs:
-        mavenPomFile: '$(Build.SourcesDirectory)/complete/src/pom.xml'
+        mavenPomFile: '$(System.DefaultWorkingDirectory)/complete/pom.xml'
 
     - task: CopyFiles@2
       displayName: 'Copy Files to artifact staging directory'
